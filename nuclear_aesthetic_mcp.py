@@ -15,9 +15,26 @@ from pydantic import BaseModel, Field, ConfigDict
 from typing import Optional, List, Dict, Any
 from enum import Enum
 import json
+import sys
+import asyncio
+
+# Prevent double event loop initialization in FastMCP cloud
+_fastmcp_cloud_mode = False
+try:
+    # Check if we're in FastMCP cloud environment
+    loop = asyncio.get_running_loop()
+    _fastmcp_cloud_mode = True
+except RuntimeError:
+    # No loop running, we're in local mode
+    pass
 
 # Initialize MCP server
-mcp = FastMCP("nuclear-aesthetic")
+if _fastmcp_cloud_mode:
+    # In cloud mode, create server without triggering run()
+    import os
+    os.environ['MCP_NO_AUTO_RUN'] = '1'
+
+mcp = FastMCP("nuclear_aesthetic_mcp")
 
 
 # =============================================================================

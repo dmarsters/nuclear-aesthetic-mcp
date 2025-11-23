@@ -17,7 +17,7 @@ from enum import Enum
 import json
 
 # Initialize MCP server
-mcp = FastMCP("nuclear_aesthetic_mcp")
+mcp = FastMCP("nuclear-aesthetic")
 
 
 # =============================================================================

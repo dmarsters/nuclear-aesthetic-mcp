@@ -1,0 +1,21 @@
+[project]
+name = "nuclear-aesthetic-mcp"
+version = "0.1.0"
+description = "MCP server for nuclear explosion aesthetic prompt enhancement"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "mcp[cli]",
+    "pydantic>=2.0",
+    "httpx",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project.scripts]
+nuclear-aesthetic-mcp = "nuclear_aesthetic_mcp:mcp.run"
+
+[tool.hatch.build.targets.wheel]
+packages = ["."]

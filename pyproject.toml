@@ -1,0 +1,17 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "nuclear-aesthetic-mcp"
+version = "0.1.0"
+description = "MCP server for nuclear explosion aesthetic prompt enhancement"
+authors = [
+    {name = "Dal Marsters", email = "dal@lushy.app"}
+]
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "fastmcp>=0.1.0",
+    "pydantic>=2.0",
+]

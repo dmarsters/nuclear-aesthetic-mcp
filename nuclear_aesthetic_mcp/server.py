@@ -10,7 +10,7 @@ Architecture follows the three-layer pattern:
 - Output: Structured visual parameters for image generation
 """
 
-from mcp.server.fastmcp import FastMCP
+from fastmcp import FastMCP
 from pydantic import BaseModel, Field, ConfigDict
 from typing import Optional, List, Dict, Any
 from enum import Enum

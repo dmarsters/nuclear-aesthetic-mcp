@@ -216,3 +216,9 @@ Commutative Properties:
 ```
 
 The key insight: temporal phase and morphological form are not independent axes. A "Wilson cloud" only exists during the shock phase. A "cauliflower cap" only exists during the rise phase. The coupling is *physical*, so the taxonomy reflects it.
+
+## License
+MIT
+
+## Author
+Dal Marsters
